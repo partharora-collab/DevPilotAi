@@ -1,15 +1,32 @@
-*, *::after, *::before{
+:root {
+  --primary-background: #0B0E14;
+  --primary-text: #E1E3E4;
+  --theme-text: #ADC6FF;
+  --theme-dull-text: #C2C6D6;
+  --theme-background: #ADC6FF;
+  --theme-dark-background: #161B22;
+  --theme-dark-text: #002E6A;
+  --default-border: #424754;
+}
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
 }
 
 html {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5em;
 }
 
 body {
   font-size: 1rem;
   line-height: 1.5em;
+  background-color: var(--primary-background);
+  color: var(--primary-text);
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -17,4 +34,120 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input {
+  font-size: inherit;
+  line-height: inherit;
+  background-color: inherit;
+  color: inherit;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: inherit;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  border: 0;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.large-text {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
+.medium-text {
+  font-size: 1.3rem;
+  line-height: 1.3em;
+}
+
+.secondary-link {
+  color: var(--theme-text);
+}
+
+.login-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.login .title {
+  color: var(--theme-text);
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  gap: 2rem;
+  max-width: 440px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title-container {
+  gap: 0.75rem;
+}
+
+.form {
+  gap: 1rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.login-card {
+  background-color: var(--theme-dark-background);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--default-border);
+}
+
+.input-container {
+  position: relative;
+  gap: 0.75rem;
+}
+
+.input-container input {
+  padding: 0.8rem 1.3rem;
+  border: 1px solid var(--default-border);
+}
+
+.input-container .secondary-link {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.checkbox-container label{
+  width: 100%;
+}
+
+.remember-check {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.75rem;
+}
+
+.submit-button {
+  font-weight: bold;
+  padding: 0.75rem;
+  width: 100%;
+  background-color: var(--theme-background);
+  color: var(--theme-dark-text);
+}
 
