@@ -1,7 +1,7 @@
 import { ColumnFlexBox } from "./flexbox.js";
 
 export function InputContainer({ title, placeholder, inputType, children }) {
-    const inputName = title.toLowerCase();
+    const inputName = title.replace(" ", "-").toLowerCase();
     return (
         <ColumnFlexBox className="input-container">
             {children}

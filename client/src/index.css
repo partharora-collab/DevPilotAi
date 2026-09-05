@@ -41,7 +41,6 @@ input {
   color: inherit;
   border: 0;
   outline: 0;
-  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -122,6 +121,7 @@ a {
 }
 
 .input-container input {
+  width: 100%;
   padding: 0.8rem 1.3rem;
   border: 1px solid var(--default-border);
 }
@@ -137,8 +137,6 @@ a {
 }
 
 .remember-check {
-  width: 1em;
-  height: 1em;
   vertical-align: middle;
   margin-right: 0.75rem;
 }

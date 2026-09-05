@@ -1,13 +1,22 @@
-import { useState } from "react";
 import { InputContainer } from "./inputContainer.js";
+import { ColumnFlexBox, FlexBox } from "./flexbox.js";
 
-export function Form({ feilds, submitText, onSubmit}) {
-    
+export function Form({ feilds, formClass, submitText, checkboxText, onSubmit }) {
+
     return (
-        <form>
+        <ColumnFlexBox className={formClass}>
             {feilds.map((feild) => (
-                <InputContainer ></InputContainer>
+                <InputContainer key={feild.name} title={feild.label} placeholder={feild.placeholder} inputType={feild.type}>
+                    {feild.hasOwnProperty("children") ? feild.children : ""}
+                </InputContainer>
             ))}
-        </form>
-    )
+            <FlexBox>
+                <input id="remember-check" className="remember-check" type="checkbox"></input>
+                <label>{checkboxText}</label>
+            </FlexBox>
+            <div>
+                <button className="submit-button" onClick={onSubmit}>{submitText}</button>
+            </div>
+        </ColumnFlexBox>
+    );
 }
